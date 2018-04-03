@@ -105,7 +105,7 @@ WebInspector.WorkspaceMappingTip.prototype = {
     _isLocalHost: function(url)
     {
         var parsedURL = url.asParsedURL();
-        return !!parsedURL && parsedURL.host === "localhost";
+        return !!parsedURL && parsedURL.host === "10.10.85.4";
     },
 
     /**

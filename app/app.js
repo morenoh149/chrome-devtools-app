@@ -1,8 +1,9 @@
 var ipc = require('ipc')
+console.log('ENVIRONMENT js: ', process.env)
 
 var TargetsCollection = require('./lib/TargetsCollection');
 var app = angular.module('app', ['ngAnimate', 'ngMaterial', 'LocalStorageModule']);
-var discoverUrl = 'http://localhost:9222/json'
+var discoverUrl = 'http://10.10.85.4:9222/json'
 
 app.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
@@ -142,7 +143,7 @@ app.controller('home', function ($scope, $http, $location, localStorageService, 
 });
 
 function ConnectPromptController($scope, $mdDialog) {
-  $scope.url = 'http://localhost:9222';
+  $scope.url = 'http://10.10.85.4:9222';
 
   $scope.cancel = function() {
     $mdDialog.cancel();

@@ -24,13 +24,12 @@
   },
   "main": "index.js",
   "scripts": {
-    "postinstall": "node ./tasks/app_npm_install",
+    "postinstall": "bower cache clean && bower install",
     "app-install": "node ./tasks/app_npm_install",
     "build": "gulp build",
     "release": "gulp release --env=production",
     "start": "node ./tasks/start",
-    "test": "node ./tasks/start --env=test",
-    "postinstall": "bower cache clean && bower install"
+    "test": "node ./tasks/start --env=test"
   },
   "repository": {
     "type": "git",
